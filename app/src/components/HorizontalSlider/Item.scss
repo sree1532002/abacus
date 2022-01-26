@@ -1,0 +1,19 @@
+.item {
+  flex: 0 0 20%;
+  transition: transform 300ms ease 100ms;
+  margin: 0 0.3%;
+  position: relative;
+
+  img {
+    height: 80%;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+.add {
+  background-color: #072227;
+  color: #aefeff;
+  height: 8.3%;
+  text-align: center;
+  padding: 3% 0 12.2%;
+}
