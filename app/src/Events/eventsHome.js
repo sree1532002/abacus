@@ -1,15 +1,20 @@
 import { Carousel } from "3d-react-carousal";
 import React from "react";
-import background from "./images/bg1.jpg";
-import tech from "./images/tech.jpeg";
-import nontech from "./images/nontech.jpeg";
-import hack from "./images/hack.jpeg";
-import "./stylehome.css";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import TechEventsList from "./TechEventsList";
+import background from "./../images/bg1.jpg";
+import tech from "./../images/tech.jpeg";
+import nontech from "./../images/nontech.jpeg";
+import hack from "./../images/hack.jpeg";
+import "./eventsHome.css";
 function EventsHome() {
   let slides = [
     <div>
       <img src={tech} alt="1" />
-      <h1 class="neon">Tech Events</h1>
+      <h1 class="neon">
+        <Link to="/techevents">Tech Events</Link>
+      </h1>
+      <Route path="/techevents" component={TechEventsList}></Route>
     </div>,
     <div>
       <img src={nontech} alt="2" />

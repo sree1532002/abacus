@@ -1,11 +1,9 @@
 import "./App.css";
-import EventDetails from "./eventDetails";
-import EventsHome from "./eventsHome";
+import EventsHome from "./Events/eventsHome";
 function App() {
   return (
     <div className="App">
       <EventsHome />
-      <EventDetails />
     </div>
   );
 }
