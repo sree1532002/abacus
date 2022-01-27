@@ -1,10 +1,11 @@
 import "./App.css";
-import Example from "./eventDetails";
-
+import EventDetails from "./eventDetails";
+import EventsHome from "./eventsHome";
 function App() {
   return (
     <div className="App">
-      <Example />
+      <EventsHome />
+      <EventDetails />
     </div>
   );
 }
