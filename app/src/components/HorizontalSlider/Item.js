@@ -4,10 +4,10 @@ import SliderContext from "./Context";
 import "./Item.scss";
 import { ResponsiveFontSize } from "react-responsive-font-size";
 
-const Item = ({ movie }) => (
+const Item = ({ event }) => (
   <SliderContext.Consumer>
     {({ onSelectSlide, currentSlide, elementRef }) => {
-      const isActive = currentSlide && currentSlide.id === movie.id;
+      const isActive = currentSlide && currentSlide.id === event.id;
 
       return (
         <div
@@ -16,7 +16,7 @@ const Item = ({ movie }) => (
             "item--open": isActive,
           })}
         >
-          <img src={movie.image} alt="" />
+          <img src={event.image} alt="" />
 
           <div className="add">
             <ResponsiveFontSize
@@ -27,16 +27,9 @@ const Item = ({ movie }) => (
                 lockFontSize: false,
               }}
             >
-              {movie.title}
+              {event.title}
             </ResponsiveFontSize>
           </div>
-
-          {/* {isActive && (
-            <ShowDetailsButton
-              onClick={() => onSelectSlide(movie)}
-              movie={movie}
-            />
-          )}  */}
         </div>
       );
     }}

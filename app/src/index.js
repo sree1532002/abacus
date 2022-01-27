@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import EventList from "./../src/EventPages/EventList.js";
+import TechEventsList from "./Events/TechEventsList.js";
+import NonTechEventsList from "./Events/NonTechEventsList.js";
+import WorkshopList from "./Workshops/WorkshopList";
 
 ReactDOM.render(
   <React.StrictMode>
-    <EventList />
+    <WorkshopList />
   </React.StrictMode>,
   document.getElementById("root")
 );

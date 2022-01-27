@@ -3,17 +3,58 @@
   transition: transform 300ms ease 100ms;
   margin: 0 0.3%;
   position: relative;
+  //width: 300px;
+  //height: 300px;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 6%;
 
   img {
-    height: 80%;
-    width: 100%;
-    vertical-align: middle;
+    height: 70%;
+    width: 80%;
+    //vertical-align: middle;
+    position: relative;
+    z-index: 10;
+    padding: 8% 8% 0 8%;
   }
 }
+
 .add {
+  margin: 0 3% 30% 3%;
   background-color: #072227;
   color: #aefeff;
-  height: 8.3%;
+  height: 8%;
   text-align: center;
-  padding: 3% 0 12.2%;
+  //padding: 3% 0 12.2%;
+  position: relative;
+  z-index: 10;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 6s linear infinite;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: #072227;
+  border-radius: 17px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
