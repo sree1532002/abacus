@@ -1,6 +1,7 @@
 import React from "react";
 import background from "./../images/bg1.jpg";
-import "./eventDetails.css";
+import "./../Events/eventsDetails.css";
+
 function EventDetails() {
   return (
     <div

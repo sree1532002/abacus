@@ -7,14 +7,12 @@ import tech from "./../images/tech.jpeg";
 import nontech from "./../images/nontech.jpeg";
 import hack from "./../images/hack.jpeg";
 import "./eventsHome.css";
+
 function EventsHome() {
   let slides = [
     <div>
       <img src={tech} alt="1" />
-      <h1 class="neon">
-        <Link to="/techevents">Tech Events</Link>
-      </h1>
-      <Route path="/techevents" component={TechEventsList}></Route>
+      <h1 class="neon">Tech Events</h1>
     </div>,
     <div>
       <img src={nontech} alt="2" />
